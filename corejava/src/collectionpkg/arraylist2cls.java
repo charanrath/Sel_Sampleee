@@ -1,0 +1,159 @@
+ package collectionpkg;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+
+public class arraylist2cls {
+	
+	public void testcollection(){
+		ArrayList<String>al=new ArrayList<String>();//creating Arraylist
+		//List<String>al=new ArrayList<String>();//creating ArrayList
+		//LinkedList<String>al=new LinkedList<String>();
+		al.add("hi");
+		al.add("hello");
+		al.add("one");
+		al.add("two");
+		al.add("three");
+		al.add("four");
+		al.add("six");
+		al.add("seven");
+		al.add("eight");
+		al.add("nine");
+		//to remove same value of al1 from al 
+		ArrayList al1=new ArrayList();
+		al1.add("hello");
+		al1.add('a');
+		al1.add(6576);
+al1.add("two");
+al.removeAll(al1);
+System.out.println(al);
+	}
+	
+	
+	public void testcollection1(){
+		ArrayList<String>al=new ArrayList<String>();//creating Arraylist
+		//List<String>al=new ArrayList<String>();//creating ArrayList
+		//LinkedList<String>al=new LinkedList<String>();
+		al.add("hi");
+		al.add("hello");
+		al.add("one");
+		al.add("two");
+		al.add("three");
+		al.add("four");
+		al.add("six");
+		al.add("seven");
+		al.add("eight");
+		al.add("nine");
+		//to retain same value of al1 from al 
+		ArrayList al1=new ArrayList();
+		al1.add("hello");
+		al1.add('a');
+		al1.add(6576);
+al1.add("two");
+al.retainAll(al1);
+System.out.println(al);
+	}
+
+	public void sorting(){
+		ArrayList<String>al=new ArrayList<String>();//creating Arraylist
+		//List<String>al=new ArrayList<String>();//creating ArrayList
+		//LinkedList<String>al=new LinkedList<String>();
+		al.add("hi");
+		al.add("hello");
+		al.add("one");
+		al.add("two");
+		al.add("three");
+		al.add("four");
+		al.add("six");
+		al.add("seven");
+		al.add("eight");
+		al.add("nine");
+		Collections.sort(al);//ascending order we use sorting
+		System.out.println(al);
+		Collections.reverse(al);//decending order always after sorting
+		System.out.println(al);
+	}
+	
+	
+	public void valuebyloop(){
+		ArrayList<String>al=new ArrayList<String>();//creating Arraylist
+		//List<String>al=new ArrayList<String>();//creating ArrayList
+		//LinkedList<String>al=new LinkedList<String>();
+		al.add("hi");
+		al.add("hello");
+		al.add("one");
+		al.add("two");
+		al.add("three");
+		al.add("four");
+		
+		
+		
+		for(String str :al){
+			System.out.print(str);
+			
+			
+			
+		}
+			}
+	public void valuebyloop1(){
+		ArrayList<String>al=new ArrayList<String>();//creating Arraylist
+		//List<String>al=new ArrayList<String>();//creating ArrayList
+		//LinkedList<String>al=new LinkedList<String>();
+		al.add("hi");
+		al.add("hello");
+		al.add("one");
+		al.add("two");
+		al.add("three");
+		al.add("four");
+		int i=0;
+		
+		
+		
+		
+		for(String str :al){
+			al.set(i, "hi"+ str);
+			i++;
+		}
+			System.out.print(al);
+			
+			
+			
+		}
+	public void valuebyloop2(){
+		ArrayList<String>al=new ArrayList<String>();//creating Arraylist
+		//List<String>al=new ArrayList<String>();//creating ArrayList
+		//LinkedList<String>al=new LinkedList<String>();
+		al.add("hi");
+		al.add("hello");
+		al.add("one");
+		al.add("two");
+		al.add("three");
+		al.add("four");
+		int i=0;
+		
+		
+		
+			
+		
+		
+		for(String str :al){
+			
+			i++;
+			if (str=="two"){
+				al.set(i, "hi"+ str);
+			
+			}
+		}
+			System.out.print(al);
+			
+			
+			
+		}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		arraylist2cls obj =new arraylist2cls();
+		obj.valuebyloop2();
+	}
+
+}
